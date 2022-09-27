@@ -111,6 +111,7 @@ const loginUser = catchError(async (req, res) => {
       res.cookie('app-access-token', accessToken, {
         maxAge: 60 * 60 * 12 * 1000,
         httpOnly: true,
+        sameSite: 'None',
       });
       res.status(200).send();
     });

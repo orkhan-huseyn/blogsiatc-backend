@@ -112,6 +112,7 @@ const loginUser = catchError(async (req, res) => {
         maxAge: 60 * 60 * 12 * 1000,
         httpOnly: true,
         sameSite: 'None',
+        secure: true
       });
       res.status(200).send();
     });
